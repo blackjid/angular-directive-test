@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Test</title>
+	<script src="bower_components/unstable-angular-complete/angular.js"></script>
+	<script src="js/rating.js"></script>
+	<script src="js/app.js"></script>
+	<style type="text/css">
+	.rating > li{
+		display:inline;
+	}
+	.rating > li.on:before{
+	   content: "\2605";
+	   position: absolute;
+	}
+	</style>
+</head>
+<body ng-app="test" ng-init="ratingValue=2">
+	<rating max-stars="10" value="{{ratingValue}}"></rating>
+	<input type="number" ng-model="ratingValue" />
+</body>
+</html>
